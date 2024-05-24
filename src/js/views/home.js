@@ -1,6 +1,7 @@
 import React from "react";
 import "../../styles/home.css";
 import Personajes from "./personajes";
+import Planetas from "./planetas";
 
 export const Home = () => {
 	return (
@@ -8,6 +9,7 @@ export const Home = () => {
 	
 	<> 
 	<Personajes/> 
+	<Planetas/>
 	</>
 )
 };
