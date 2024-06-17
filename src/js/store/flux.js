@@ -6,8 +6,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 			personajes: [],
 			planetas: [],
 			naves: [],
+			fav: [],
 		},
 		actions: {
+			favorito: (nombreFav) => {
+				const store = getStore();
+
+				if (store.fav.includes(nombreFav)){
+					setStore({fav:store.fav.filter((repetido) => repetido != nombreFav)});
+				} else {
+					setStore({fav:[...store.fav,nombreFav]});
+				}
+
+			},
+
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");

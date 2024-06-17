@@ -4,9 +4,9 @@ import "../../styles/tarjetas.css"
 
 
 const Personajes = () => {
-const {store, action} = useContext(Context);
+const {store, actions} = useContext(Context);
 
-
+console.log(store.fav)
     return (
         <> <div>
             <h2 className="tituloPersonajes display-6">Personajes</h2>
@@ -20,7 +20,7 @@ const {store, action} = useContext(Context);
                             <p className="card-text">Color de pelo: {item.hair_color}</p>
                             <p className="card-text">Color de ojos: {item.eye_color}</p>
                             
-                            
+                            <button onClick={()=>actions.favorito(item.name)}>Favoritos</button>
                         </div>
                     </div>))}
             </div>
