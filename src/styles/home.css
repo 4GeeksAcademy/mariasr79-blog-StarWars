@@ -1,0 +1,15 @@
+.contenedorPersonajes {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin-left: 5rem;
+}
+
+.cardPersonajes {
+    margin-right: 1.5rem;
+    width: 25rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+}

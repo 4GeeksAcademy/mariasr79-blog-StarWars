@@ -8,10 +8,12 @@ export const Home = () => {
 	return (
 
 	
-	<> 
-	<Personajes/> 
-	<Planetas/>
-	<Naves/>
-	</>
-)
+	
+		<div className="bg-secondary">
+		<Personajes/>
+		<Planetas/>
+		<Naves/>
+	</div>
+);
 };
+
