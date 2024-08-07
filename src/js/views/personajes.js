@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/tarjetas.css"
+import { Link } from "react-router-dom";
 
 
 const Personajes = () => {
@@ -20,7 +21,10 @@ console.log(store.fav)
                             <p className="card-text">Color de pelo: {item.hair_color}</p>
                             <p className="card-text">Color de ojos: {item.eye_color}</p>
                             
-                            <button onClick={()=>actions.favorito(item.name)}>Favoritos</button>
+                            <button className="btn btn-outline-warning m-2" onClick={()=>actions.favorito(item.name)}>Favoritos</button>
+                            <Link to={"/personajedetalle/"+ index}>
+                            <button className="btn btn-outline-primary m-2">Mas Info</button>
+                            </Link>
                         </div>
                     </div>))}
             </div>

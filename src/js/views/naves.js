@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/tarjetas.css"
+import { Link } from "react-router-dom";
 
 
 const Naves = () => {
-const {store, action} = useContext(Context);
+const {store, actions} = useContext(Context);
 
 
     return (
@@ -20,8 +21,10 @@ const {store, action} = useContext(Context);
                             <p className="card-text">Pasajeros: {item.passengers}</p>
                             <p className="card-text">Longitud: {item.length}</p>
 
-                            <button onClick={()=>actions.favorito(item.name)}>Favoritos</button>
-                            
+                            <button className="btn btn-outline-warning m-2" onClick={()=>actions.favorito(item.name)}>Favoritos</button>
+                            <Link to={"/navedetalle/"+ index}>
+                            <button className="btn btn-outline-primary m-2">Mas Info</button>
+                            </Link>
                             
                         </div>
                     </div>))}

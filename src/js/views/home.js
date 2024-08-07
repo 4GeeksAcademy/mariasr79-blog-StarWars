@@ -7,8 +7,6 @@ import Naves from "./naves";
 export const Home = () => {
 	return (
 
-	
-	
 		<div className="bg-secondary">
 		<Personajes/>
 		<Planetas/>

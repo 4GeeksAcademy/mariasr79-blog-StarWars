@@ -2,8 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
-import "../../styles/tarjetasDetalles.css";
-import img800x600 from "../../img/800x600.jpg";
+
 
 export const NaveDetalle = () => {
 
@@ -17,7 +16,7 @@ export const NaveDetalle = () => {
             <div className="container-flex text-center general">
                 <div className="row align-items-center">
                     <div className="col-6">
-                        <img className="imagenDetalle" src={img800x600}></img>
+                       
                     </div>
 
                     <div className="col-4 informacionPersonaje">

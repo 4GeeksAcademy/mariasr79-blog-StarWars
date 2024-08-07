@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/tarjetas.css"
+import { Link } from "react-router-dom";
 
 
 const Planetas = () => {
-const {store, action} = useContext(Context);
+const {store, actions} = useContext(Context);
 
 
     return (
@@ -19,8 +20,10 @@ const {store, action} = useContext(Context);
                             <p className="card-text textoPersonajes">Terreno: {item.terrain}</p>
                             <p className="card-text">Clima: {item.climate}</p>
                             <p className="card-text">Gravity: {item.gavity}</p>
-                            <button onClick={()=>action.favorito(item.name)}>Favoritos</button>
-                            
+                            <button className="btn btn-outline-warning m-2" onClick={()=>actions.favorito(item.name)}>Favoritos</button>
+                            <Link to={"/planetadetalle/"+ index}>
+                            <button className="btn btn-outline-primary m-2">Mas Info</button>
+                            </Link>
                         </div>
                     </div>))}
             </div>
